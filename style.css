@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa; /* Light blue background */
+    margin: 0;
+}
+
+.stopwatch-container {
+    text-align: center;
+    background: #ffffff; /* White background for the stopwatch */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Fixed width for the container */
+}
+
+h1 {
+    color: #00796b; /* Dark teal color for the heading */
+    font-size: 2.5em; /* Larger font size for the heading */
+    margin-bottom: 20px;
+}
+
+#display {
+    font-size: 3em; /* Larger font size for the timer display */
+    color: #d32f2f; /* Red color for the timer */
+    margin: 20px 0;
+    border: 2px solid #00796b; /* Border around the display */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f1f8e9; /* Light green background for the display */
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.2em; /* Increased font size for buttons */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:not(:disabled) {
+    background-color: #00796b; /* Dark teal for active buttons */
+    color: white; /* White text for buttons */
+}
+
+button:hover:not(:disabled) {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+button:disabled {
+    background-color: #ccc; /* Grey for disabled buttons */
+    color: #666; /* Dark grey text for disabled buttons */
+    cursor: not-allowed;
+}
+
+h2 {
+    color: #00796b; /* Dark teal for lap heading */
+    font-size: 1.5em; /* Medium font size for lap heading */
+    margin-top: 30px;
+}
+
+.lap-list-container {
+    height: 150px; /* Fixed height for lap list */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #00796b; /* Border around the lap list */
+    border-radius: 5px; /* Rounded corners for the lap list */
+    background-color: #f1f8e9; /* Light green background for the lap list */
+    padding: 10px; /* Padding inside the lap list */
+}
+
+#lapList {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0;
+}
+
+#lapList li {
+    background-color: #e0f2f1; /* Light teal background for lap items */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #004d40; /* Darker teal for lap text */
+    font-size: 1. 1em; /* Slightly larger font size for lap items */
+}

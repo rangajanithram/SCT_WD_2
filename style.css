@@ -4,33 +4,39 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0f7fa; /* Light blue background */
+    background-image: url(/GITHUB/SCT_WD_2/images/nature-mountain-displays-radiant-colors-sunset-generative-ai.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background-color: #e0f7fa; Light blue background */
     margin: 0;
 }
 
 .stopwatch-container {
     text-align: center;
-    background: #ffffff; /* White background for the stopwatch */
+    /* background: #ffffff; White background for the stopwatch */
+    backdrop-filter: blur(10px);
     padding: 30px;
+    border: 3px solid black;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     width: 300px; /* Fixed width for the container */
 }
 
 h1 {
-    color: #00796b; /* Dark teal color for the heading */
+    color: #c66642; /* Dark teal color for the heading */
     font-size: 2.5em; /* Larger font size for the heading */
     margin-bottom: 20px;
 }
 
 #display {
     font-size: 3em; /* Larger font size for the timer display */
-    color: #d32f2f; /* Red color for the timer */
+    color: #000; /* Red color for the timer */
     margin: 20px 0;
-    border: 2px solid #00796b; /* Border around the display */
+    border: 2px solid #000000; /* Border around the display */
     padding: 10px;
     border-radius: 10px;
-    background-color: #f1f8e9; /* Light green background for the display */
+    /* backdrop-filter: blur(5px); */
+    /* background-color: #f1f8e9; Light green background for the display */
 }
 
 .buttons {

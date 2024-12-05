@@ -21,24 +21,23 @@ body {
     border: 3px solid black;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    width: 300px; /* Fixed width for the container */
+    width: 300px; 
 }
 
 h1 {
     text-shadow: 2px 2px 1px black;
     color: #c66642;
-    font-size: 2.5em; /* Larger font size for the heading */
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 #display {
-    font-size: 2.5em; /* Larger font size for the timer display */
+    font-size: 2.5em;
     color: #000; 
     margin: 20px 0;
-    border: 2px solid #000000; /* Border around the display */
-    /* padding: 1px; */
+    border: 2px solid #000000; 
+    padding: 1px;
     border-radius: 10px;
-    
 }
 
 .buttons {
@@ -49,9 +48,8 @@ button {
     font-family: Abril Fatface;
     padding: 5px 15px;
     margin: 5px;
-    font-size: 1.2em; /* Increased font size for buttons */
+    font-size: 1.2em; 
     cursor: pointer;
-    /* text-shadow: 1px 1px 1px black; */
     border: 1px solid black;
     border-radius: 5px;
     transition: all 0.3s;
@@ -59,61 +57,58 @@ button {
 
 button:not(:disabled) {
     background-color: #c66642; 
-    color: white; /* White text for buttons */
+    color: white; 
 }
 
 button:hover:not(:disabled) {
     box-shadow: 1px 1px 6px black;
     background-color: #fff;
-    color: #c66642; /* Darker teal on hover */
+    color: #c66642;
 }
 
 button:disabled {
-    background-color: #ccc; /* Grey for disabled buttons */
-    color: #909090; /* Dark grey text for disabled buttons */
+    background-color: #ccc;
+    color: #909090; 
     cursor: not-allowed;
 }
 
 h2 {
-    color: #000; /* Dark teal for lap heading */
-    font-size: 1.5em; /* Medium font size for lap heading */
+    color: #000;
+    font-size: 1.5em;
     margin-top: 30px;
 }
 
 .lap-list-container {
-    height: 150px; /* Fixed height for lap list */
-    overflow-y: auto; /* Enable vertical scrolling */
-    border: 1px solid #000; /* Border around the lap list */
-    border-radius: 5px; /* Rounded corners for the lap list */
-    padding: 10px; /* Padding inside the lap list */
+    height: 150px; 
+    overflow-y: auto; 
+    border: 1px solid #000; 
+    border-radius: 5px;
+    padding: 10px;
 }
+
 .lap-list-container::-webkit-scrollbar{
     width: 3.5px;
-    /* height: 10px; */
-
 }
+
 .lap-list-container::-webkit-scrollbar-thumb{
     background-color: #c66642;
     border-radius: 10px;
-
 }
 
 .lap-list-container::-webkit-scrollbar-track {
-    background-color: #000; /* Change this to your desired track color */
+    background-color: #000; 
 }
 
 #lapList {
-    list-style-type: none; /* Remove bullet points from the list */
+    list-style-type: none; 
     padding: 0;
 }
 
-
-
 #lapList li {
-    background-color: #c66642; /* Light teal background for lap items */
+    background-color: #c66642;
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
-    color: #000; /* Darker teal for lap text */
-    font-size: 1. 1em; /* Slightly larger font size for lap items */
+    color: #000; 
+    font-size: 1. 1em;
 }

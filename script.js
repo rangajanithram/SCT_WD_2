@@ -27,12 +27,12 @@ function updateTime() {
     const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    const milliseconds = Math.floor((difference % 1000) / 10); // Get milliseconds
+    const milliseconds = Math.floor((difference % 1000) / 10);
 
     display.innerHTML = (hours < 10 ? "0" : "") + hours + ":" + 
                         (minutes < 10 ? "0" : "") + minutes + ":" + 
                         (seconds < 10 ? "0" : "") + seconds + "." + 
-                        (milliseconds < 10 ? "0" : "") + milliseconds; // Show milliseconds
+                        (milliseconds < 10 ? "0" : "") + milliseconds;
 }
 
 function pauseTimer() {
@@ -47,7 +47,7 @@ function resetTimer() {
     clearInterval(tInterval);
     running = false;
     difference = 0;
-    display.innerHTML = "00:00:00.00"; // Reset display to include milliseconds
+    display.innerHTML = "00:00:00.00";
     lapList.innerHTML = "";
     lapCount = 0;
     startBtn.disabled = false;
@@ -59,7 +59,7 @@ function recordLap() {
     lapCount++;
     const lapTime = display.innerHTML;
     const lapItem = document.createElement("li");
-    lapItem.textContent = `Lap ${lapCount}: ${lapTime}`; // Include milliseconds in lap time
+    lapItem.textContent = `Lap ${lapCount}: ${lapTime}`;
     lapList.appendChild(lapItem);
 }
 

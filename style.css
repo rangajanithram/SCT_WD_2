@@ -1,5 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Abril Fatface, Lora, Poppins, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,13 +10,12 @@ body {
     background-image: url(/GITHUB/SCT_WD_2/images/nature-mountain-displays-radiant-colors-sunset-generative-ai.jpg);
     background-size: cover;
     background-position: center;
-    /* background-color: #e0f7fa; Light blue background */
     margin: 0;
 }
 
 .stopwatch-container {
     text-align: center;
-    /* background: #ffffff; White background for the stopwatch */
+   
     backdrop-filter: blur(10px);
     padding: 30px;
     border: 3px solid black;
@@ -23,20 +25,20 @@ body {
 }
 
 h1 {
-    color: #c66642; /* Dark teal color for the heading */
+    text-shadow: 2px 2px 1px black;
+    color: #c66642;
     font-size: 2.5em; /* Larger font size for the heading */
     margin-bottom: 20px;
 }
 
 #display {
-    font-size: 3em; /* Larger font size for the timer display */
-    color: #000; /* Red color for the timer */
+    font-size: 2.5em; /* Larger font size for the timer display */
+    color: #000; 
     margin: 20px 0;
     border: 2px solid #000000; /* Border around the display */
-    padding: 10px;
+    /* padding: 1px; */
     border-radius: 10px;
-    /* backdrop-filter: blur(5px); */
-    /* background-color: #f1f8e9; Light green background for the display */
+    
 }
 
 .buttons {
@@ -44,32 +46,36 @@ h1 {
 }
 
 button {
-    padding: 10px 20px;
+    font-family: Abril Fatface;
+    padding: 5px 15px;
     margin: 5px;
     font-size: 1.2em; /* Increased font size for buttons */
     cursor: pointer;
-    border: none;
+    /* text-shadow: 1px 1px 1px black; */
+    border: 1px solid black;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 button:not(:disabled) {
-    background-color: #00796b; /* Dark teal for active buttons */
+    background-color: #c66642; 
     color: white; /* White text for buttons */
 }
 
 button:hover:not(:disabled) {
-    background-color: #004d40; /* Darker teal on hover */
+    box-shadow: 1px 1px 6px black;
+    background-color: #fff;
+    color: #c66642; /* Darker teal on hover */
 }
 
 button:disabled {
     background-color: #ccc; /* Grey for disabled buttons */
-    color: #666; /* Dark grey text for disabled buttons */
+    color: #909090; /* Dark grey text for disabled buttons */
     cursor: not-allowed;
 }
 
 h2 {
-    color: #00796b; /* Dark teal for lap heading */
+    color: #000; /* Dark teal for lap heading */
     font-size: 1.5em; /* Medium font size for lap heading */
     margin-top: 30px;
 }
@@ -77,10 +83,23 @@ h2 {
 .lap-list-container {
     height: 150px; /* Fixed height for lap list */
     overflow-y: auto; /* Enable vertical scrolling */
-    border: 1px solid #00796b; /* Border around the lap list */
+    border: 1px solid #000; /* Border around the lap list */
     border-radius: 5px; /* Rounded corners for the lap list */
-    background-color: #f1f8e9; /* Light green background for the lap list */
     padding: 10px; /* Padding inside the lap list */
+}
+.lap-list-container::-webkit-scrollbar{
+    width: 3.5px;
+    /* height: 10px; */
+
+}
+.lap-list-container::-webkit-scrollbar-thumb{
+    background-color: #c66642;
+    border-radius: 10px;
+
+}
+
+.lap-list-container::-webkit-scrollbar-track {
+    background-color: #000; /* Change this to your desired track color */
 }
 
 #lapList {
@@ -88,11 +107,13 @@ h2 {
     padding: 0;
 }
 
+
+
 #lapList li {
-    background-color: #e0f2f1; /* Light teal background for lap items */
+    background-color: #c66642; /* Light teal background for lap items */
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
-    color: #004d40; /* Darker teal for lap text */
+    color: #000; /* Darker teal for lap text */
     font-size: 1. 1em; /* Slightly larger font size for lap items */
 }

@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
 
 body {
@@ -11,29 +10,71 @@ body {
     background-size: cover;
     background-position: center;
     margin: 0;
+    transition: all 0.5s; /* Smooth transition */
+}
+
+body h1{
+    color: #c66642;
+    text-shadow: 1px 1px 1px black;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+body.dark-mode h1{
+    color: #1c2549;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 1px #83c4e2;
+    margin-bottom: 20px;
+}
+
+body.dark-mode {
+    font-family: Abril Fatface, Lora, Poppins, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/GITHUB/SCT_WD_2/images/1311994.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
 }
 
 .stopwatch-container {
     text-align: center;
-   
     backdrop-filter: blur(10px);
     padding: 30px;
     border: 3px solid black;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px black;
     width: 300px; 
+    transition: 0.5s all; /* Smooth transition */
 }
 
-h1 {
-    text-shadow: 2px 2px 1px black;
-    color: #c66642;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.stopwatch-container.dark-mode {
+   text-align: center;
+   
+    backdrop-filter: blur(20px);
+
+    padding: 30px;
+    border: 3px solid #1c2549;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #1c2549;
+    width: 300px; 
 }
 
 #display {
     font-size: 2.5em;
     color: #000; 
+    margin: 20px 0;
+    border: 2px solid #000000; 
+    padding: 1px;
+    border-radius: 10px;
+}
+
+body.dark-mode #display {
+    font-size: 2.5em;
+    color: #1c2549; 
+    box-shadow: 2px 2px 0px black;
     margin: 20px 0;
     border: 2px solid #000000; 
     padding: 1px;
@@ -55,35 +96,151 @@ button {
     transition: all 0.3s;
 }
 
-button:not(:disabled) {
-    background-color: #c66642; 
-    color: white; 
+
+
+
+
+body.dark-mode button {
+    font-family: Abril Fatface;
+    padding: 5px 15px;
+    margin: 5px;
+    font-size: 1.2em; 
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: all 0.3s;
 }
 
-button:hover:not(:disabled) {
-    box-shadow: 1px 1px 6px black;
-    background-color: #fff;
-    color: #c66642;
+body.dark-mode button:not(:disabled) {
+    background-color: #83c4e2; 
+    color: #1c2549;
 }
 
-button:disabled {
+body.dark-mode button:hover:not(:disabled) {
+    box-shadow: 0px 0px 6px black;
+    background-color: #1c2549;
+    color: #83c4e2;
+}
+
+body button:not(:disabled) {
+    background-color: #c66642; /* Light mode button background */
+
+    color : #000; /* Dark text for light mode */
+}
+
+button:disabled{
     background-color: #ccc;
     color: #909090; 
     cursor: not-allowed;
 }
 
-h2 {
-    color: #000;
-    font-size: 1.5em;
-    margin-top: 30px;
+body.dark-mode button:disabled{
+    background-color: #ccc;
+    color: #909090; 
+    cursor: not-allowed;
 }
+
+
+body button:hover:not(:disabled) {
+    background-color: #000; /* Light mode button hover */
+    color: #c66642;
+    box-shadow: 0px 0px 6px black;
+}
+
+h2 {
+    color: #c66642;
+    font-size: 1.8em;
+    margin-top: 30px;
+    text-shadow: 1px 1px 1px black;
+    transition: all 0.5s;
+}
+
 
 .lap-list-container {
     height: 150px; 
     overflow-y: auto; 
     border: 1px solid #000; 
+    border-radius: 5px; 
+    padding: 5px; 
+    margin-top: 10px; 
+}
+
+
+#lapList{
+    list-style: none;
+    padding: 0;
+}
+
+#lapList li {
+    background-color: #c66642;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000; 
+    font-size: 1. 1em;
+}
+
+#lapList li:hover {
+    box-shadow: 1px 1px 5px #1c2549;
+    cursor: pointer;
+}
+
+body.dark-mode h2 {
+    color: #1c2549;
+    font-size: 1.8em;
+    margin-top: 30px;
+    text-shadow: 1px 1px 1px #83c4e2;
+    transition: all 0.5s;
+}
+
+body.dark-mode .lap-list-container {
+    height: 150px; 
+    overflow-y: auto; 
+    border: 1px solid #1c2549; 
     border-radius: 5px;
     padding: 10px;
+}
+
+
+
+body .lap-list-container{
+    color: #000; /* Dark text for lap items in light mode */
+}
+
+
+body.dark-mode .lap-list-container li {
+    color: #ffffff; /* Light text for lap items in dark mode */
+}
+
+body.dark-mode #lapList {
+    list-style-type: none; 
+    padding: 0;
+}
+
+body.dark-mode #lapList li{
+    background-color: #83c4e2;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #1c2549; 
+    font-size: 1. 1em;
+}
+
+body.dark-mode #lapList li:hover{
+    box-shadow: 1px 1px 5px #1c2549;
+}
+
+body.dark-mode .lap-list-container::-webkit-scrollbar{
+    width: 3.5px;
+}
+
+body.dark-mode .lap-list-container::-webkit-scrollbar-thumb{
+    background-color: #83c4e2;
+    border-radius: 10px;
+}
+
+body.dark-mode .lap-list-container::-webkit-scrollbar-track {
+    background-color: #1c2549; 
 }
 
 .lap-list-container::-webkit-scrollbar{
@@ -97,18 +254,4 @@ h2 {
 
 .lap-list-container::-webkit-scrollbar-track {
     background-color: #000; 
-}
-
-#lapList {
-    list-style-type: none; 
-    padding: 0;
-}
-
-#lapList li {
-    background-color: #c66642;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    color: #000; 
-    font-size: 1. 1em;
 }

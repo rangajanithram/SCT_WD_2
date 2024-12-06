@@ -25,6 +25,13 @@ function startTimer() {
         timerInterval = setInterval(() => {
             elapsedTime++;
             display.textContent = formatTime(elapsedTime);
+            
+            // Play sound every second
+            if (elapsedTime % 100 === 0) { // Check if a second has passed (100 milliseconds)
+                const tickSound = document.getElementById("tickSound");
+                tickSound.currentTime = 0; // Reset sound to start
+                tickSound.play(); // Play the sound
+            }
         }, 10);
     }
 }

@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(/GITHUB/SCT_WD_2/images/nature-mountain-displays-radiant-colors-sunset-generative-ai.jpg);
+    background-image: url(/GITHUB/SCT_WD_2/Resources/nature-mountain-displays-radiant-colors-sunset-generative-ai.jpg);
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -33,7 +33,7 @@ body.dark-mode {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(/GITHUB/SCT_WD_2/images/1311994.jpeg);
+    background-image: url(/GITHUB/SCT_WD_2/Resources/1311994.jpeg);
     background-size: cover;
     background-position: center;
     margin: 0;
